@@ -1,0 +1,56 @@
+# ============ 签名密钥（绝对禁止入库）============
+*.jks
+*.keystore
+*.p12
+*.pem
+keystore/
+
+# ============ 构建产物 ============
+build/
+*/build/
+.gradle/
+.kotlin/
+local.properties
+*.iml
+.idea/
+.cxx/
+captures/
+
+# ============ 发布产物 ============
+dist/
+*.apk
+*.aab
+*.idsig
+
+# R8 符号映射：线上崩溃还原用，不对外发布
+release-mapping/
+
+# ============ 本地备份 ============
+backup-*.tar.gz
+*.tar.gz
+*.zip
+
+# ============ 第三方编译树 ============
+# FreeRDP 源码与编译产物体积 580 MB+，按 README「构建」一节自行获取
+tools/FreeRDP-3.32.2/
+tools/freerdp-build-*/
+tools/freerdp-deps/
+tools/rdp-lab/build/
+tools/rdp-lab/.gradle/
+tools/rdp-lab/.kotlin/
+
+# ============ 联调抓包与日志 ============
+# pcap / lab.log 含真实连接流量，不入库
+tools/fixtures/
+
+# ============ 构建日志 ============
+*.log
+
+# ============ 编辑器 / 系统 ============
+.DS_Store
+Thumbs.db
+*.swp
+
+# ============ 工具内部文件 ============
+.workbuddy/
+.wbapp_*.genie
